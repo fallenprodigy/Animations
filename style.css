@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: black;
+}
+
+.child {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  margin: 20px 10px;
+  padding: 30px;
+  background: radial-gradient(
+    rgb(255, 0, 179),
+    rgba(229, 255, 0),
+    rgb(223, 0, 0),
+    rgb(30, 30, 255)
+  );
+  border-radius: 100%;
+  animation: move 10s infinite;
+  transform: translateX(0%);
+  left: 0%;
+  /* animation: center 5s infinite; */
+}
+
+.child:hover {
+  background: radial-gradient(yellow, blue, red, white, blue);
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(765px);
+  }
+  100% {
+    transform: translateX(-50%);
+    left: 50%;
+  }
+}
+/* @keyframes center {
+  0%,
+  10% {
+    transform: translateX(0%);
+    left: 0%;
+  }
+  90%,
+
+} */
